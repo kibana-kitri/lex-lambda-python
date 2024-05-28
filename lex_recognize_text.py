@@ -6,7 +6,7 @@ import boto3
 client = boto3.client('lexv2-runtime')
 
 def lambda_handler(event, context):
-    input_text= "sem 5g"
+    input_text= "olá"
     
     # verificar no Redis cache se existe a intenção. Se não existir chama a api recognize_text
 
@@ -14,7 +14,7 @@ def lambda_handler(event, context):
     botId='',
     botAliasId='',
     localeId='',
-    sessionId='123456',  # A unique identifier for the session
+    sessionId='',  # A unique identifier for the session
     text=input_text
     )
 
